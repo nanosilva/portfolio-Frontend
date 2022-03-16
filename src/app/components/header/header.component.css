@@ -1,0 +1,6 @@
+.slider{
+ background: url("//src/assets/imagenes/rio_choele.jpg");
+ background-size:cover ;
+ background-position: center;
+ height: 400px;   
+}
