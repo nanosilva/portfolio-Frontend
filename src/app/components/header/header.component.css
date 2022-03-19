@@ -1,6 +1,28 @@
-.slider{
- background: url("//src/assets/imagenes/rio_choele.jpg");
- background-size:cover ;
- background-position: center;
- height: 400px;   
+.banner-1{
+	margin-top: 100px;
+	width: 100%;
+	background: #1ABC9C;
+	clear: both;
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	transition: 0.4s;
+}
+.banner-1:hover{
+	background: #444;
+	transition: .4s;
+}
+.banner-1 h3{
+	color: #fff;
+	font-size: 32px;
+}
+.banner-1 a{
+	text-decoration: none;
+	margin-left: 20px;
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 2px solid #fff;
 }

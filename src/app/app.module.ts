@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './components/about/about.component';
+import { allIcons,NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxBootstrapIconsModule.pick(allIcons),
   ],
   providers: [],
   bootstrap: [AppComponent]
