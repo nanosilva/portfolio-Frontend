@@ -1,0 +1,50 @@
+	{
+
+	"name": "Sebastián Silva",
+	"backImage:"",
+	"image":"",
+	"position":"Full Stack Developer Jr.",
+	"company":{
+		"name":"xxx",
+		"img": "",
+		"url": "#",
+		},
+	"school":{
+		"name": "",
+		"img": "",
+		"url";"",
+		},
+	"ubication": "La Plata (Argentina)",
+	
+	"about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex 		 	          corporis quis inventore tempore corrupti praesentium voluptatem 		          deleniti tempora molestias nam accusamus animi facere saepe 		                 explicabo rem, commodi exercitationem quia sunt",
+
+	
+
+	experiencia:[{
+		"position":"Asistente Técnico Area de Planificación y Monitoreo",
+		"company": "Programa Sumar - Ministerio de Salud Pcia. Bs As",
+		"img" : "../../../assets/imagenes/logo_bs_as.jpg",
+		"mode": "",
+		"start": "2014",
+		"end": "actualidad",
+		"timeElapsed": "8 años"
+	}],
+
+	educacion: [{
+		"school": "UNLP",
+		"title": "Licenciado en Economía",
+		"img":,
+		"career": "Facultad Ciencias Económicas",
+		"start": "1999",
+		"end": "incompleto"
+	},
+		{
+		"school": "ENET N°1",
+		"title": "Técnico Electromecánico",
+		"img":,
+		"career": "Colegio Industrial",
+		"start": "1992",
+		"end": "1997"
+	},
+
+		{

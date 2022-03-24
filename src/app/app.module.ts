@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { allIcons,NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    EducacionComponent
   ],
   imports: [
     BrowserModule,
