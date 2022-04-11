@@ -7,7 +7,8 @@ import { AboutComponent } from './components/about/about.component';
 import { allIcons,NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-
+import { PortfolioService } from './servicios/portfolio.service';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import { EducacionComponent } from './components/educacion/educacion.component';
   imports: [
     BrowserModule,
     NgxBootstrapIconsModule.pick(allIcons),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

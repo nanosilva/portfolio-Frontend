@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { pencilFill } from 'ngx-bootstrap-icons';
-
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-about',
@@ -8,13 +8,16 @@ import { pencilFill } from 'ngx-bootstrap-icons';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
   pencilfill= pencilFill
-  
+  miPortfolio: any= {}
 
-  constructor() { }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-  }
+    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+      console.log(data);
+      this.miPortfolio= data;
+  });
+}
 
 }

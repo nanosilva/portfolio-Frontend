@@ -1,17 +1,17 @@
 <div class="container mt-2 shadow p-4 mb-4 bg-white rounded-3">
     <div class="row">
-        <div class="class col-2">
+        <div class="col-lg-2">
          <h2>Acerca de</h2>
-            <img src="../../../assets/imagenes/bono.jpg" class="rounded-circle" width="120" height="120" alt="">
-            <h4>Sebastian Silva</h4>
-            <p>Full Stack Developer Jr.</p>
+            <img [src]="miPortfolio.image" class="rounded-circle" width="120" height="120" alt=""/>
+            <h4>{{miPortfolio.name}}</h4>
+            <p>{{miPortfolio.position}}</p>
         </div>
-        <div class="class col-10 ">
+        <div class="container col-10 ">
             <div class="float-end"><a href="">
                 <i i-bs name="pencil-fill" style="color:black"></i></a>
                 </div>  
             <div class="container mt-5"> 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex corporis quis inventore tempore corrupti praesentium voluptatem deleniti tempora molestias nam accusamus animi facere saepe explicabo rem, commodi exercitationem quia sunt.</p>
+            <p>{{miPortfolio?.about}}</p>
             </div> 
        </div>
     </div>

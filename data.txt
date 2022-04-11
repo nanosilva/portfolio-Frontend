@@ -2,7 +2,7 @@
 
 	"name": "Sebastián Silva",
 	"backImage:"",
-	"image":"",
+	"image":"../../../assets/imagenes/bono.jpg"",
 	"position":"Full Stack Developer Jr.",
 	"company":{
 		"name":"xxx",
