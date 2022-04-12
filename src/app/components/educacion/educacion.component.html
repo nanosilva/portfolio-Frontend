@@ -3,47 +3,32 @@
 
     
         <ul class="list-unstyled">
-            <li>
+            <li *ngFor="let educacion of educacionList">
              <div class="row">
                 <div class="col-2">
-                <img src="../../../assets/imagenes/logo_fce.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                <img [src]="educacion.img" class="rounded-circle" width="120" height="120" alt="" >
                 </div>
              <div class="col-10"> 
-                <div class="float-end"><a href="">
+                <div class="float-end "><a class="me-4" href="">
                     <i i-bs name="pencil-fill" style="color:black"></i></a>
+                    <a href=""> 
+                     <i i-bs name="x-circle-fill" style="color:black"></i></a>
                  </div>
            
-              <h5>UNLP</h5>
-                 <p>Facultad de Ciencias Económicas, Lic. en Economía</p>
-                <p><time>1999</time> - <time>incompleto</time></p>
+              <h5>{{educacion.school}}</h5>
+                 <h6>{{educacion.career}}</h6>
+                 <p>{{educacion.title}}</p>
+                <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
                
              </div>
                </div>
             </li>
-            <li>
-                <div class="row">
-                <div class="col-2">
-                <img src="../../../assets/imagenes/Logo_UNLP.jpg" class="rounded-circle" width="120" height="120" alt="" >
-                </div>
-              <div class="col-10"> 
-                <div class="float-end"><a href="">
-                    <i i-bs name="pencil-fill" style="color:black"></i></a>
-                    </div>
-           
-              <h5>ENET N° 1</h5>
-                <p>Industrial, Técnico Electromecánico</p>
-                <p><time>1992</time> - <time>1997</time></p>
-                          
-             </div>
-            </div>
-            </li>
+            
         </ul>
-   
-                        
+              
                      
         
-    
-                
+              
         
         
         

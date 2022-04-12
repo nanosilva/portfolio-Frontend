@@ -8,12 +8,17 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
+  login: boolean= false;
 
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     
+    }
+    estaLogueado(){
+      this.login=!false;
+      console.log("click");
+      
     }
 
 }

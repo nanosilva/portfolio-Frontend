@@ -8,7 +8,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  pencilfill= pencilFill
+  login: boolean= true;
   miPortfolio: any= {}
 
   constructor(private datosPortfolio:PortfolioService) { }
@@ -18,6 +18,9 @@ export class AboutComponent implements OnInit {
       console.log(data);
       this.miPortfolio= data;
   });
+}
+estaLogueado(){
+  this.login=!true;
 }
 
 }

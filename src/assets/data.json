@@ -21,6 +21,7 @@
 	"experiencia" : [{
 		"position":"Asistente Técnico Area de Planificación y Monitoreo",
 		"company": "Programa Sumar - Ministerio de Salud Pcia. Bs As",
+		"function":"Diseñar, mantener y actualizar las bases de datos de Estadísticas Sanitarias, Económicas y Financieras del Proyecto y analizar su cumplimiento.",
 		"img" : "../../../assets/imagenes/logo_bs_as.jpg",
 		"mode": "",
 		"start": "2014",
@@ -31,7 +32,7 @@
 	"educacion" : [{
 		"school": "UNLP",
 		"title": "Licenciado en Economía",
-		"img":"",
+		"img":"./../../assets/imagenes/logo_fce.jpg",
 		"career": "Facultad Ciencias Económicas",
 		"start": "1999",
 		"end": "incompleto"
@@ -39,7 +40,7 @@
 		{
 		"school": "ENET N°1",
 		"title": "Técnico Electromecánico",
-		"img":"",
+		"img":"./../../assets/imagenes/Logo_UNLP.jpg",
 		"career": "Colegio Industrial",
 		"start": "1992",
 		"end": "1997"

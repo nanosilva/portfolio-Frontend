@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  private miPortfolio: datos[]=[];
   
   constructor(private http: HttpClient) { }
 
