@@ -15,10 +15,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     
     }
-    estaLogueado(){
-      this.login=!false;
-      console.log("click");
-      
-    }
+   
 
 }
