@@ -1,25 +1,19 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
-    <div class="container mt-2">
     <h2>Hard & Soft Skills</h2>
-    <div class="row">
-        <div class="col-lg-2">
-            <img src="../../../assets/imagenes/html5.png" class="rounded-circle" width="120" height="120" alt="" >
-        </div>
-     <div class="col-10"> 
-        <div class="float-end"><a class="me-4" href="">
-            <i i-bs name="pencil-fill" style="color:black"></i></a>
-            <a href=""> 
-            <i i-bs name="x-circle-fill" style="color:black"></i></a>
-        </div>
-        <ul class="list-unstyled">
-            <li>html</li>
-            <li>css</li>
-            <li>bootstrap</li>
-            <li>angular</li>
-            <li>java</li>
-            <li>Spring Boot</li>       
-        </ul>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let skill of skillList">
+          <div class="card h-100">
+            <img [src]="skill.imagen" class="rounded" width="120" height="120" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{skill.nombre}}</h5>
+              <p class="card-text">{{skill.detalle}}</p>
+            </div>
+            <div class="card-footer" >
+                <small class="text-muted"   >En Progreso</small>
+                <progress max="100" > </progress>
+                100
+            </div>
+         
+             
         
-   </div>
-</div>
 </div>

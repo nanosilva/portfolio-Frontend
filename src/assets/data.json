@@ -44,6 +44,48 @@
 		"career": "Colegio Industrial",
 		"start": "1992",
 		"end": "1997"
-	}]
+	}],
+	"skills": [
+		{
+		"nombre" : "STATA",
+		"detalle":"Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc",
+		"imagen": "./../../assets/imagenes/stata.png"
+		},
+		{"nombre" : "QGis",
+		"detalle":"QGIS es un Sistema de Información Geográfica de software libre y de código abierto",
+		"imagen": "./../../assets/imagenes/qgis.png"
+		},
+		
+		{
+		"nombre" : "Java",
+		"detalle":"Java es un lenguaje de programación y una plataforma informática que fue comercializada por primera vez en 1995 por Sun Microsystems. Hay muchas aplicaciones y sitios web que no funcionarán, probablemente, a menos que tengan Java instalado, y cada día se crean más. Java es rápido, seguro y fiable.",
+		"imagen": "./../../assets/imagenes/java.png"
+		},
+		{
+		"nombre" : "Spring Boot",
+		"detalle":"Es una solución para crear aplicaciones basadas en Spring de una manera rápida, autónoma y con características deseables para producción",
+		"imagen": "./../../assets/imagenes/spring.png"
+		   },
+		   {
+			"nombre" : "Angular",
+			"detalle":"Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.",
+			"imagen": "./../../assets/imagenes/angular.png"
+   
+		   },
+		   {
+			"nombre" : "HTML",
+			"detalle":"El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos"	,
+			"imagen": "./../../assets/imagenes/HTML.png"
+			},
+
+		{
+		"nombre" : "CSS",
+		"detalle":"La hoja de estilo en cascada o CSS (siglas en inglés de cascading style sheets) es un lenguaje usado para definir la presentación de un documento estructurado escrito en HTML y derivados.",
+		"imagen": "./../../assets/imagenes/css.png"
+		}
+		
+		
+		
+	]
 }
         
