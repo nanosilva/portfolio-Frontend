@@ -11,7 +11,7 @@ export class EducacionComponent implements OnInit {
 
   educacionList: Educacion[]=[];
   educacion: Educacion = {
-		id:3,
+		id:0,
 		school:"",
 		title:"" ,
 		career:"" ,
@@ -22,7 +22,7 @@ export class EducacionComponent implements OnInit {
   
   
 
-  constructor(private datosPortfolio: PortfolioService){
+  constructor(public datosPortfolio: PortfolioService){
 
     }
   
@@ -33,17 +33,34 @@ export class EducacionComponent implements OnInit {
     });
   
   }
-  editar(){
-    this.datosPortfolio.editarEducacion(this.educacion).subscribe(data=>
-    this.educacionList=data);
+  agregar(){
+    this.datosPortfolio.agregarEducacion(this.educacion).subscribe(data=>
+    this.educacionList.push(data))
     };
     
-  delete(){
-    this.datosPortfolio.deleteDatos(this.educacion.id).subscribe(data=>
-      this.educacionList=data);
-  };
-  openforEdit(educacion: any){
+  delete(educacion:Educacion){
+    this.datosPortfolio.deleteDatos(educacion)
+    .subscribe(
+     ()=>[
+     this.educacionList=this.educacionList.filter( (item) => {
+      console.log("eduacion deleted!"); 
+      return item.id !== educacion.id
+      
+     })
+    ]
+    )};
+
+   editar(educacion: Educacion){
+     this.datosPortfolio.editarEducacion(educacion).subscribe()
+      
+    } ;
+
+  openforEdit(educacion: Educacion){
     this.educacion= educacion;
+  }
+  onSubmit(){
+   this.editar;
+
   }
   
   }

@@ -38,16 +38,16 @@ export class PortfolioService {
             return this.http.get<Proyecto[]>(`${this.apiUrl}/proyecto`);
               }
       
-  editarEducacion(educacion: Educacion ): Observable <any>{
+  agregarEducacion(educacion: Educacion ): Observable <any>{
       return this.http.post(`${this.apiUrl}/educacion`, educacion, httpOptions); 
   }
 
-  deleteDatos(id:number): Observable <any>{
-    const url = `${this.apiUrl}/educacion/id`
-      return this.http.delete<any>(url)
+  deleteDatos(educacion:Educacion): Observable <Educacion>{
+    const url = `${this.apiUrl}/educacion/${educacion.id}`;
+      return this.http.delete<Educacion>(url, httpOptions)
   };
-  agregarDatos(dato:any): Observable<any>{
-    return this.http.post<any>(this.apiUrl, dato)
+  editarEducacion(educacion: Educacion):Observable<any>{
+      return this.http.put(`${this.apiUrl}/educacion/${educacion.id}`, educacion, httpOptions)
   };
  
 }
