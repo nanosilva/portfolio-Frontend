@@ -30,6 +30,7 @@
 	}],
 
 	"educacion" : [{
+		"id":"1",
 		"school": "UNLP",
 		"title": "Licenciado en Economía",
 		"img":"./../../assets/imagenes/logo_fce.jpg",
@@ -86,6 +87,20 @@
 		
 		
 		
+	],
+	"persona":[
+		{
+		"id": "1",
+		"nombre": "Sebastián Silva",
+		"apellido":"",
+		"fecha_nacimiento":"27/05/1979",
+		"nacionalidad": "Argentino",
+		"mail": "seba_nanosilva@hotmail.com",
+		"image": "./assets/imagenes/bono.jpg",
+		"ocupacion":"Full Stack Developer Jr.",
+		"ubicacion": "La Plata (Argentina)",
+		"about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex corporis quis inventore tempore corrupti praesentium voluptatem deleniti tempora molestias nam accusamus animi facere saepe explicabo rem, commodi exercitationem quia sunt"
+		}
 	]
 }
         

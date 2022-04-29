@@ -1,0 +1,102 @@
+{
+  "experiencia": [
+    {
+      "id": 1,
+      "position": "Asistente Técnico Area de Planificación y Monitoreo",
+      "company": "Programa Sumar - Ministerio de Salud Pcia. Bs As",
+      "function": "Diseñar, mantener y actualizar las bases de datos de Estadísticas Sanitarias, Económicas y Financieras del Proyecto y analizar su cumplimiento.",
+      "img": "../../../assets/imagenes/logo_bs_as.jpg",
+      "mode": "",
+      "start": "2014",
+      "end": "actualidad",
+      "timeElapsed": "8 años"
+    }
+  ],
+  "educacion": [
+    {
+      "id": 1,
+      "school": "UNLP",
+      "title": "Licenciado en Economía",
+      "img": "./../../assets/imagenes/logo_fce.jpg",
+      "career": "Facultad Ciencias Económicas",
+      "start": "1999",
+      "end": "incompleto"
+    },
+    {
+      "id": 2,
+      "school": "ENET N°1",
+      "title": "Técnico Electromecánico",
+      "img": "./../../assets/imagenes/Logo_UNLP.jpg",
+      "career": "Colegio Industrial",
+      "start": "1992",
+      "end": "1997"
+    },
+    {
+      "id": 3,
+      "school": "",
+      "title": "",
+      "career": "",
+      "start": "",
+      "img": "",
+      "end": ""
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "nombre": "STATA",
+      "detalle": "Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc",
+      "imagen": "./../../assets/imagenes/stata.png"
+    },
+    {
+      "id": 2,
+      "nombre": "QGis",
+      "detalle": "QGIS es un Sistema de Información Geográfica de software libre y de código abierto",
+      "imagen": "./../../assets/imagenes/qgis.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Java",
+      "detalle": "Java es un lenguaje de programación y una plataforma informática que fue comercializada por primera vez en 1995 por Sun Microsystems. Hay muchas aplicaciones y sitios web que no funcionarán, probablemente, a menos que tengan Java instalado, y cada día se crean más. Java es rápido, seguro y fiable.",
+      "imagen": "./../../assets/imagenes/java.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Spring Boot",
+      "detalle": "Es una solución para crear aplicaciones basadas en Spring de una manera rápida, autónoma y con características deseables para producción",
+      "imagen": "./../../assets/imagenes/spring.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Angular",
+      "detalle": "Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.",
+      "imagen": "./../../assets/imagenes/angular.png"
+    },
+    {
+      "id": 6,
+      "nombre": "HTML",
+      "detalle": "El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos",
+      "imagen": "./../../assets/imagenes/HTML.png"
+    },
+    {
+      "id": 7,
+      "nombre": "CSS",
+      "detalle": "La hoja de estilo en cascada o CSS (siglas en inglés de cascading style sheets) es un lenguaje usado para definir la presentación de un documento estructurado escrito en HTML y derivados.",
+      "imagen": "./../../assets/imagenes/css.png"
+    }
+  ],
+  "persona": [
+    {
+      "id": 1,
+      "nombre": "Sebastián Silva",
+      "apellido": "",
+      "fecha_nacimiento": "27/05/1979",
+      "nacionalidad": "Argentino",
+      "mail": "seba_nanosilva@hotmail.com",
+      "image": "./assets/imagenes/bono.jpg",
+      "ocupacion": "Full Stack Developer Jr.",
+      "ubicacion": "La Plata (Argentina)",
+      "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex corporis quis inventore tempore corrupti praesentium voluptatem deleniti tempora molestias nam accusamus animi facere saepe explicabo rem, commodi exercitationem quia sunt"
+    }
+  ]
+}

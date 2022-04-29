@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pencilFill } from 'ngx-bootstrap-icons';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Persona } from '../interfaces/portfolio.interface';
 
 @Component({
   selector: 'app-about',
@@ -9,18 +10,25 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AboutComponent implements OnInit {
   login: boolean= true;
-  miPortfolio: any= {}
-
+  personaList:any;
+  persona: Persona[]=[]
+   
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    this.datosPortfolio.obtenerAbout().subscribe(data=>{
       console.log(data);
-      this.miPortfolio= data;
+      this.personaList= data;
   });
 }
 estaLogueado(){
   this.login=!true;
+
 }
+
+
+ 
+
+
 
 }

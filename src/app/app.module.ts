@@ -10,7 +10,9 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import {HttpClientModule} from '@angular/common/http';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component'
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component'
   imports: [
     BrowserModule,
     NgxBootstrapIconsModule.pick(allIcons),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]
