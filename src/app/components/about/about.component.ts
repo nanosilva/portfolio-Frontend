@@ -11,7 +11,7 @@ import { Persona } from '../interfaces/portfolio.interface';
 export class AboutComponent implements OnInit {
   login: boolean= true;
   personaList:any;
-  persona: Persona[]=[]
+  persona: Persona[]=[];
    
   constructor(private datosPortfolio:PortfolioService) { }
 

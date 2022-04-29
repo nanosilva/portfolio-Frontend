@@ -1,6 +1,12 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
-    <h2>Educación</h2>
+  <div class="float-end">
+    <a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal2">
+      <i i-bs name="plus-circle-fill" style="color:black"></i>
+        </a>
+        </div>
 
+    <h2>Educación</h2>
+   
     
         <ul class="list-unstyled">
             <li *ngFor="let educacion of educacionList" class="list group-item list-group-item-action"
@@ -12,6 +18,7 @@
              <div class="col-10" > 
                 <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal">
                    <i (click)="openforEdit(educacion)" i-bs name="pencil-fill" style="color:black" ></i></a>
+                   
                    <a  href="" > 
                    <i (click)="delete(educacion)" i-bs name="x-circle-fill" style="color:black"></i></a>
                  </div>
@@ -67,7 +74,45 @@
     </div>
   </div>
 </div>
+<!-- Modal2 -->
+<div class="modal fade" id="miModal2" tabindex="-1" role="dialog" aria-labelledby="modalTitle2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle2">Agregar:{{educacion.school}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form (ngSubmit)="agregar()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Establecimiento Educativo</label>
+              <input type="text" [(ngModel)]="educacion.school" class="form-control" name="school" aria-describedby="emailHelp">
               
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Carrera</label>
+              <input type="text" [(ngModel)]="educacion.career" class="form-control" name="career">
+            </div>
+            
+            <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Título</label>
+               <input type="text" [(ngModel)]="educacion.title" class="form-control" name="title">
+             </div>
+
+             <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Año</label>
+               <input type="text" [(ngModel)]="educacion.start" class="form-control" name="start">
+             </div>
+             <button type="submit" class="btn btn-primary" >Agregar</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>            
                      
         
               

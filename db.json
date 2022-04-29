@@ -30,6 +30,15 @@
       "career": "Colegio Industrial",
       "start": "1992",
       "end": "1997"
+    },
+    {
+      "id": 3,
+      "school": "Escuela 236",
+      "title": "Primario",
+      "career": "Primaria",
+      "start": "1991",
+      "img": "",
+      "end": ""
     }
   ],
   "skills": [
