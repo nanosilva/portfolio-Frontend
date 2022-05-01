@@ -1,14 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Skills } from '../interfaces/portfolio.interface';
+
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
+  
   skillList: Skills[]=[];
+  skill: Skills={
+    id:0,
+    nombre:"",
+    detalle:"",
+    imagen:""
+    }
+
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
@@ -17,5 +26,27 @@ export class SkillsComponent implements OnInit {
     this.skillList= data
     });
   }
+  agregar(){
+    this.datosPortfolio.agregarSkill(this.skill).subscribe(data=>{
+      console.log("click agregar"),
+    this.skillList.push(data)});
+  };
+
+  delete(skill:Skills){
+      this.datosPortfolio.deleteSkill(skill)
+      .subscribe(
+       ()=>[
+       this.skillList=this.skillList.filter( (item) => {
+        console.log("skill deleted!"); 
+        return item.id !== skill.id
+        
+       })
+      ]
+      )};
+
+editar(skill: Skills){
+        this.datosPortfolio.editarSkill(skill).subscribe()
+         
+       } ;
 
 }

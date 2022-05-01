@@ -1,21 +1,107 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
-    <h2>Hard & Soft Skills</h2>
+  <div class="container">
+    <h2>Hard & Soft Skills <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModal4">
+      <i i-bs name="plus-circle-fill" style="color:black" ></i>
+       </a></h2>
+            </div>  
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col" *ngFor="let skill of skillList">
           <div class="card h-100">
             <div class="container mt-3">
+              <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal3">
+                <i i-bs name="pencil-fill" style="color:black" ></i></a>
+                <a  href=""> 
+                <i (click)="delete(skill)" i-bs name="x-circle-fill" style="color:black"></i></a>
+               </div>
             <img [src]="skill.imagen" class="rounded" width="100" height="100" alt="...">
           </div>
             <div class="card-body">
               <h5 class="card-title">{{skill.nombre}}</h5>
               <p class="card-text">{{skill.detalle}}</p>
             </div>
-            <div class="card-footer" >
-                <small class="text-muted"   >En Progreso</small>
-                <progress max="100" > </progress>
-                100
+            <div class="card-footer " >
+             
+              <circle-progress
+              [percent]="65" [maxPercent]="100" [toFixed]="0" [showTitle]="true" [showUnits]="false"
+              [showSubtitle]="true" [showImage]="false" [showBackground]="false" [showInnerStroke]="true"
+              [clockwise]="true" [responsive]="false" [startFromZero]="true" [showZeroOuterStroke]="true"
+              [title]="'working in'" [titleFontSize]="'15'" [subtitleFontSize]="'15'" 
+              [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'"
+              >
+              </circle-progress>
+             
             </div>
-         
+           <div>
+           
+           </div>
+      
+            
              
         
 </div>
+<!-- Modal3 -->
+<div class="modal fade" id="miModal3" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle3">Editar: {{skill.nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form (ngSubmit)="editar(skill)">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="text" [(ngModel)]="skill.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Detalle</label>
+              <input type="text" [(ngModel)]="skill.detalle" class="form-control" name="detalle">
+            </div>
+                                  
+             <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal4 -->
+<div class="modal fade" id="miModal4" tabindex="-1" role="dialog" aria-labelledby="modalTitle4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle4">Agregar:  {{skill.nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form (ngSubmit)="agregar()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="text" [(ngModel)]="skill.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Detalle</label>
+              
+              <input type="text"  [(ngModel)]="skill.detalle" class="form-control" name="detalle" >
+           
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Imagen</label>
+              <input type="text" [(ngModel)]="skill.imagen" class="form-control" name="imagen" aria-describedby="emailHelp">
+              
+            </div>
+
+              <button type="submit" class="btn btn-primary" >Agregar</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>

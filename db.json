@@ -45,7 +45,7 @@
     {
       "id": 1,
       "nombre": "STATA",
-      "detalle": "Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc",
+      "detalle": "Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc\"",
       "imagen": "./../../assets/imagenes/stata.png"
     },
     {

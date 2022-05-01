@@ -1,10 +1,11 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
-    <h2>Acerca de</h2>
+    <div class="container mt-2">
+        <h2>Acerca de</h2>
    
     
-    <ul class="list-unstyled">
-        <li *ngFor="let persona of personaList" class="list group-item list-group-item-action">
-            <div class="row">
+        <ul class="list-unstyled">
+         <li *ngFor="let persona of personaList" class="list group-item list-group-item-action">
+             <div class="row">
                 <div class="col-2" >
                         <img [src]="persona.image" class="rounded-circle" width="140" height="140" alt="" >
                         <div><i class="float-end" i-bs name="pencil-fill" style="color:black" ></i></div>
@@ -12,21 +13,22 @@
                         <p>{{persona.ubicacion}}</p>    
                         
                     </div>
-                 <div class="col-10" > 
-                     <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal">
+                        <div class="col-10" > 
+                          <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal">
                          <i i-bs name="pencil-fill" style="color:black" ></i></a>
                          <a  href="" > 
                          <i  i-bs name="x-circle-fill" style="color:black"></i></a>
                         </div>
            
-                    <h4>{{persona.nombre}}</h4>
-                      <h5 class="container mt-4">{{persona.about}}</h5>
+                        <h4>{{persona.nombre}}</h4>
+                        <h5 class="container mt-4">{{persona.about}}</h5>
                  
-               
+                        
+                     </div>
                 </div>
-            </div>
                
             </li>
             
         </ul>
+    </div>
 </div>
