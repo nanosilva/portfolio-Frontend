@@ -9,9 +9,21 @@ import { Persona } from '../interfaces/portfolio.interface';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  login: boolean= true;
-  personaList:any;
-  persona: Persona[]=[];
+ 
+  personaList: Persona[]=[];
+  persona: Persona = {
+    id: 0,
+    nombre:"",
+    apellido:"", 
+    fecha_nacimiento:"",
+    nacionalidad :"",
+    mail:"",
+    image:"",
+    ocupacion:"",
+    ubicacion:"",
+    about:"",
+
+  }
    
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -21,9 +33,35 @@ export class AboutComponent implements OnInit {
       this.personaList= data;
   });
 }
-estaLogueado(){
-  this.login=!true;
 
+openforEdit(persona: Persona){
+  this.persona= persona;
+}
+
+editar(persona : Persona){
+    this.datosPortfolio.editarPersona(persona).subscribe()
+  
+   } ;
+onSubmit(){
+  this.editar;
+}
+
+agregarPers(){
+  this.datosPortfolio.agregarPersona(this.persona).subscribe(data=>
+    this.personaList.push(data))
+};
+
+deletePers(persona:Persona){
+  this.datosPortfolio.deletePersona(persona)
+  .subscribe(
+   ()=>[
+   this.personaList=this.personaList.filter( (item) => {
+    console.log("persona deleted!"); 
+    return item.id !== persona.id
+    
+   })
+  ]
+  )};
 }
 
 
@@ -31,4 +69,4 @@ estaLogueado(){
 
 
 
-}
+

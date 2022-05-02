@@ -62,4 +62,31 @@ editarSkill(skill: Skills):Observable<any>{
   return this.http.put(`${this.apiUrl}/skills/${skill.id}`, skill, httpOptions)
 };
 
+
+editarPersona(persona: Persona): Observable <any>{
+  return this.http.put(`${this.apiUrl}/persona/${persona.id}`, persona, httpOptions)
+};
+
+agregarPersona(persona: Persona ): Observable <Persona>{
+  return this.http.post<Persona>(`${this.apiUrl}/persona`, persona, httpOptions); 
+};
+
+deletePersona(persona:Persona): Observable <Persona>{
+  const url = `${this.apiUrl}/persona/${persona.id}`;
+    return this.http.delete<Persona>(url, httpOptions)
+};
+
+agregarExperiencia(experiencia: Experiencia ): Observable <any>{
+  return this.http.post<Experiencia>(`${this.apiUrl}/experiencia`, experiencia, httpOptions); 
+};
+
+deleteExperiencia(experiencia:Experiencia): Observable <Experiencia>{
+  const url = `${this.apiUrl}/educacion/${experiencia.id}`;
+    return this.http.delete<Experiencia>(url, httpOptions)
+};
+
+editarExperiencia(experiencia: Experiencia): Observable <any>{
+  return this.http.put(`${this.apiUrl}/experiencia/${experiencia.id}`, experiencia, httpOptions)
+};
+
 }

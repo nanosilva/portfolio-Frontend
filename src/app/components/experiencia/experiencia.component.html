@@ -1,28 +1,120 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
-    <div class="container mt-2">
-        <div class="row">
-            <h2>Experiencia</h2>
-            <div class="col-lg-2">
-            <img src="../../../assets/imagenes/logo_bs_as.jpg" class="rounded-circle" width="120" height="120" alt="" >
+    <div class="container">
+        <h2>Experiencia <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModalexpeadd">
+            <i  i-bs name="plus-circle-fill" style="color:black"></i>
+              </a>
+         </h2>
+      
+          </div>
+  
+    
+      
+          <ul class="list-unstyled">
+              <li *ngFor="let experiencia of experienciaList" class="list group-item list-group-item-action"
+                 >
+               <div class="row">
+                  <div class="col-2" >
+                  <img [src]="experiencia.img" class="rounded-circle" width="120" height="120" alt="" >
+                  </div>
+               <div class="col-10" > 
+                  <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModalexpeedit">
+                     <i (click)="openforEdit(experiencia)" i-bs name="pencil-fill" style="color:black" ></i></a>
+                     
+                     <a  href="" > 
+                     <i (click)="deleteExpe(experiencia)" i-bs name="x-circle-fill" style="color:black"></i></a>
+                   </div>
+             
+                <h4>{{experiencia.company}}</h4>
+                   <h5>{{experiencia.position}}</h5>
+                   <h6>{{experiencia.function}}</h6>
+                  <p><time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></p>
+                 
+               </div>
+                 </div>
+              </li>
+              
+          </ul>
+          
+        </div>
+<!-- modal Experiencia -->
+        <div class="modal fade" id="miModalexpeadd" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalTitleexpeadd">Editar:</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                   <form (ngSubmit)="agregarExpe()" >
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Establecimiento</label>
+                        <input type="text" [(ngModel)]="experiencia.company" class="form-control" name="company" aria-describedby="emailHelp">
+                        
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Posición</label>
+                        <input type="text" [(ngModel)]="experiencia.position" class="form-control" name="position">
+                      </div>
+                      
+                      <div class="mb-3">
+                         <label for="exampleInputPassword1" class="form-label">Función</label>
+                         <input type="text" [(ngModel)]="experiencia.function" class="form-control" name="function">
+                       </div>
+          
+                       <div class="mb-3">
+                         <label for="exampleInputPassword1" class="form-label">Año Inicio </label>
+                         <input type="text" [(ngModel)]="experiencia.start" class="form-control" name="start">
+                         <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
+                         <input type="text" [(ngModel)]="experiencia.end" class="form-control" name="end">
+                       </div>
+                       <button type="submit" class="btn btn-primary" >Agregar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  
+                </div>
+              </div>
             </div>
-            <div class="col-10"> 
-                <div class="float-end"><a class="me-4" href="">
-                    <i i-bs name="pencil-fill" style="color:black"></i></a>
-                    <a href=""> 
-                    <i i-bs name="x-circle-fill" style="color:black"></i></a>
-                    </div>
-            <ul class="list-unstyled">
-            <li *ngFor="let experiencia of experienciaList">
-            <h4>{{experiencia.company}}</h4>
-            
-            <h5><time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></h5>
-            <p>{{experiencia.position}}</p>
-            <p>{{experiencia.function}}</p>
-            
-            </li>
-            </ul>   
+          </div>  
+<!-- modal Experiencia Edit -->
+<div class="modal fade" id="miModalexpeedit" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleexpeedit">Editar:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
+        <div class="modal-body">
+           <form (ngSubmit)="editarExpe(experiencia)">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Establecimiento</label>
+                <input type="text" [(ngModel)]="experiencia.company" class="form-control" name="company" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Posición</label>
+                <input type="text" [(ngModel)]="experiencia.position" class="form-control" name="position">
+              </div>
+              
+              <div class="mb-3">
+                 <label for="exampleInputPassword1" class="form-label">Función</label>
+                 <input type="text" [(ngModel)]="experiencia.function" class="form-control" name="function">
+               </div>
+  
+               <div class="mb-3">
+                 <label for="exampleInputPassword1" class="form-label">Año Inicio </label>
+                 <input type="text" [(ngModel)]="experiencia.start" class="form-control" name="start">
+                 <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
+                 <input type="text" [(ngModel)]="experiencia.end" class="form-control" name="end">
+               </div>
+               <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
+            </form>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          
+        </div>
+      </div>
     </div>
-</div>
+</div>          

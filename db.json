@@ -10,6 +10,17 @@
       "start": "2014",
       "end": "actualidad",
       "timeElapsed": "8 años"
+    },
+    {
+      "id": 2,
+      "position": "Consultor",
+      "company": "Incluir Salud",
+      "function": "Asistir tecnicamente",
+      "img": "",
+      "mode": "",
+      "start": "2007",
+      "end": "2014",
+      "timeElapsed": ""
     }
   ],
   "educacion": [
@@ -44,7 +55,7 @@
   "skills": [
     {
       "id": 1,
-      "nombre": "STATA",
+      "nombre": "STATA2",
       "detalle": "Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc\"",
       "imagen": "./../../assets/imagenes/stata.png"
     },
@@ -88,7 +99,7 @@
   "persona": [
     {
       "id": 1,
-      "nombre": "Sebastián Silva",
+      "nombre": "Sebastian Silva",
       "apellido": "",
       "fecha_nacimiento": "27/05/1979",
       "nacionalidad": "Argentino",

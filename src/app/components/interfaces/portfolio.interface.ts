@@ -41,13 +41,7 @@ export interface Experiencia{
     nombre: string;
     detalle: string;
     imagen: string;
+    fecha: string;
+    link: string;
   }
- export interface EducacionList{
-  id: number;
-  school: string;
-  title: string;
-  img: string;
-  career: string;
-  start: string;
-  end: string;
- }
+ 

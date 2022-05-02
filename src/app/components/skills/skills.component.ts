@@ -25,14 +25,15 @@ export class SkillsComponent implements OnInit {
     console.log(data);
     this.skillList= data
     });
-  }
-  agregar(){
-    this.datosPortfolio.agregarSkill(this.skill).subscribe(data=>{
-      console.log("click agregar"),
-    this.skillList.push(data)});
   };
 
-  delete(skill:Skills){
+  agregarSk(){
+    this.datosPortfolio.agregarSkill(this.skill).subscribe(data=>
+      this.skillList.push(data))
+  };
+
+
+  delete(skill:Skills): void{
       this.datosPortfolio.deleteSkill(skill)
       .subscribe(
        ()=>[
@@ -44,9 +45,14 @@ export class SkillsComponent implements OnInit {
       ]
       )};
 
-editar(skill: Skills){
+editarSk(skill: Skills){
         this.datosPortfolio.editarSkill(skill).subscribe()
          
        } ;
 
+openforEdit(skill: Skills){
+    this.skill= skill;
+  }
+
 }
+

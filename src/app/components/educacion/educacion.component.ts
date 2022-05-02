@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Educacion, EducacionList } from '../interfaces/portfolio.interface';
+import { Educacion } from '../interfaces/portfolio.interface';
 
 @Component({
   selector: 'app-educacion',

@@ -1,6 +1,8 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
     <div class="container mt-2">
-        <h2>Acerca de</h2>
+        <h2>Acerca de  <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModaladd">
+            <i i-bs name="plus-circle-fill" style="color:black" ></i>
+             </a></h2>
    
     
         <ul class="list-unstyled">
@@ -14,10 +16,10 @@
                         
                     </div>
                         <div class="col-10" > 
-                          <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal">
-                         <i i-bs name="pencil-fill" style="color:black" ></i></a>
+                          <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModalabout">
+                         <i (click)="openforEdit(persona)" i-bs name="pencil-fill" style="color:black" ></i></a>
                          <a  href="" > 
-                         <i  i-bs name="x-circle-fill" style="color:black"></i></a>
+                         <i (click)="deletePers(persona)" i-bs name="x-circle-fill" style="color:black"></i></a>
                         </div>
            
                         <h4>{{persona.nombre}}</h4>
@@ -32,3 +34,81 @@
         </ul>
     </div>
 </div>
+
+
+<!-- modalabout -->
+<div class="modal fade" id="miModalabout" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleabout">Editar: </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form (ngSubmit)="editar(persona)">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="text" [(ngModel)]="persona.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Acerca de:</label>
+                <input type="text" [(ngModel)]="persona.about" class="form-control" name="about">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ocupación:</label>
+                <input type="text" [(ngModel)]="persona.ocupacion" class="form-control" name="ocupacion">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ubicación</label>
+                <input type="text" [(ngModel)]="persona.ubicacion" class="form-control" name="ubicacion">
+              </div>
+                                    
+               <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modalaagregar -->
+<div class="modal fade" id="miModaladd" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitledd">Agregar  </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form (ngSubmit)="agregarPers()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="text" [(ngModel)]="persona.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Acerca de</label>
+                <input type="text" [(ngModel)]="persona.about" class="form-control" name="about">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ocupación</label>
+                <input type="text" [(ngModel)]="persona.ocupacion" class="form-control" name="ocupacion">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ubicación</label>
+                <input type="text" [(ngModel)]="persona.ubicacion" class="form-control" name="ubicacion">
+              </div>
+                                    
+               <button type="submit" class="btn btn-primary" >Agregar</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
