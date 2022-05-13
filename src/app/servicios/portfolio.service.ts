@@ -35,7 +35,7 @@ export class PortfolioService {
           }
         
  obtenerProyectos():Observable<Proyecto[]>{
-            return this.http.get<Proyecto[]>(`${this.apiUrl}/proyecto`);
+            return this.http.get<Proyecto[]>(`${this.apiUrl}/proyectos`);
               }
       
  agregarEducacion(educacion: Educacion ): Observable <any>{

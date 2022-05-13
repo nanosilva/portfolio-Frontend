@@ -1,6 +1,6 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
   <div class="container">
-    <h2>Educación <a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal2">
+    <h2>Educación <a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal2" data-toggle="tooltip" data-placement="top" title="Agregar">
       <i i-bs name="plus-circle-fill" style="color:black"></i>
           </a>
           </h2>
@@ -13,11 +13,11 @@
                 <img [src]="educacion.img" class="rounded-circle" width="120" height="120" alt="" >
                 </div>
              <div class="col-10" > 
-                <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal">
+                <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal" data-toggle="tooltip" data-placement="top" title="Editar">
                    <i (click)="openforEdit(educacion)" i-bs name="pencil-fill" style="color:black" ></i></a>
                    
                    <a  href="" > 
-                   <i (click)="delete(educacion)" i-bs name="x-circle-fill" style="color:black"></i></a>
+                   <i (click)="delete(educacion)" i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
                  </div>
            
               <h4>{{educacion.school}}</h4>

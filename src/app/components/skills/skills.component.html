@@ -1,6 +1,6 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
   <div class="container">
-    <h2>Hard & Soft Skills  <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModalskilladd">
+    <h2>Hard & Soft Skills  <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModalskilladd" data-toggle="tooltip" data-placement="top" title="Agregar">
       <i i-bs name="plus-circle-fill" style="color:black" ></i>
        </a></h2>
     
@@ -10,10 +10,10 @@
           
           <div class="card h-100">
             <div class="container mt-3">
-              <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal3">
+              <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal3" data-toggle="tooltip" data-placement="top" title="Editar">
                 <i (click)="openforEdit(skill)" i-bs name="pencil-fill" style="color:black" ></i></a>
                 <a  href="">
-                <i (click)="delete(skill)" i-bs name="x-circle-fill" style="color:black"></i></a>
+                <i (click)="delete(skill)" i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
                </div>
             
             <img [src]="skill.imagen" class="rounded" width="100" height="100" alt="...">
@@ -25,7 +25,7 @@
             <div class="card-footer " >
              
               <circle-progress
-              [percent]="65" [maxPercent]="100" [toFixed]="0" [showTitle]="true" [showUnits]="false"
+              [percent]="60" [maxPercent]="100" [toFixed]="0" [showTitle]="true" [showUnits]="false"
               [showSubtitle]="true" [showImage]="false" [showBackground]="false" [showInnerStroke]="true"
               [clockwise]="true" [responsive]="false" [startFromZero]="true" [showZeroOuterStroke]="true"
               [title]="'working in'" [titleFontSize]="'15'" [subtitleFontSize]="'15'" 

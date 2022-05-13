@@ -15,9 +15,9 @@ export class SkillsComponent implements OnInit {
     id:0,
     nombre:"",
     detalle:"",
-    imagen:""
-    }
-
+    imagen:"",
+   
+  }
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {

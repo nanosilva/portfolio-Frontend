@@ -15,7 +15,7 @@
       "id": 2,
       "position": "Consultor",
       "company": "Incluir Salud",
-      "function": "Asistir tecnicamente",
+      "function": "Asistir técnicamente",
       "img": "",
       "mode": "",
       "start": "2007",
@@ -108,6 +108,32 @@
       "ocupacion": "Full Stack Developer Jr.",
       "ubicacion": "La Plata (Argentina)",
       "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex corporis quis inventore tempore corrupti praesentium voluptatem deleniti tempora molestias nam accusamus animi facere saepe explicabo rem, commodi exercitationem quia sunt"
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "Portfolio",
+      "detalle": "Desarrollé una aplicación web full stack, donde se muestra mis datos personales, estudios cursados, experiencia laboral, conocimiento de las tecnologías y lo que aprendí en el desarrollo de Argentina Programa. Esta aplicación es de arquitectura distribuida.",
+      "imagen": "./../../assets/imagenes/portfolio.png",
+      "fecha": "mayo 2022",
+      "link": "http://....."
+    },
+    {
+      "id": 2,
+      "nombre": "Lista de Tareas",
+      "detalle": "Aplicación desarrollada como práctica del curso para la implementación de los conceptos adquiridos en Angular.",
+      "imagen": "./../../assets/imagenes/tasklist.png",
+      "fecha": "mayo 2022",
+      "link": "http://....."
+    },
+    {
+      "id": 3,
+      "nombre": "App de Clima",
+      "detalle": "Aplicación que provee los datos del clima de acuerdo a la geolocalización",
+      "imagen": "./../../assets/imagenes/clima.jpg",
+      "fecha": "mayo 2022",
+      "link": "http://....."
     }
   ]
 }

@@ -1,0 +1,12 @@
+.banner-1{
+	margin-top: 20px;
+	width: 100%;
+	
+	padding-top: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	transition: 0.4s;
+}

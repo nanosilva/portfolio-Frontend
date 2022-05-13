@@ -35,6 +35,7 @@ export interface Experiencia{
     nombre: string;
     detalle: string;
     imagen: string;
+   
   }
   export interface Proyecto{
     id: number;
