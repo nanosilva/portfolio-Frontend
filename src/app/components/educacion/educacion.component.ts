@@ -15,9 +15,9 @@ export class EducacionComponent implements OnInit {
 		school:"",
 		title:"" ,
 		career:"" ,
-    start:"",
+    inicio:"",
     img:"",
-    end:""
+    fin:""
    }
   
   

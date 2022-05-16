@@ -13,11 +13,11 @@ export class ExperienciaComponent implements OnInit {
     id:0,
     position:"",
     company:"",
-    function:"",
+    funcion:"",
     img:"",
     mode:"",
-    start:"",
-    end:"",
+    inicio:"",
+    fin:"",
     timeElapsed:"",
   }
  
@@ -41,7 +41,7 @@ export class ExperienciaComponent implements OnInit {
       .subscribe(
        ()=>[
        this.experienciaList=this.experienciaList.filter( (item) => {
-        console.log("eduacion deleted!"); 
+        console.log("experiencia deleted!"); 
         return item.id !== experiencia.id
         
        })

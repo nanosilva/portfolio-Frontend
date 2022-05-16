@@ -16,14 +16,14 @@
                   <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModalexpeedit" data-toggle="tooltip" data-placement="top" title="Editar">
                      <i (click)="openforEdit(experiencia)" i-bs name="pencil-fill" style="color:black" ></i></a>
                      
-                     <a  href="" > 
+                     <a > 
                      <i (click)="deleteExpe(experiencia)" i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
                    </div>
              
                 <h4>{{experiencia.company}}</h4>
                    <h5>{{experiencia.position}}</h5>
-                   <h6>{{experiencia.function}}</h6>
-                  <p><time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></p>
+                   <h6>{{experiencia.funcion}}</h6>
+                  <p><time>{{experiencia.inicio}}</time> - <time>{{experiencia.fin}}</time></p>
                  
                </div>
                  </div>
@@ -37,7 +37,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="modalTitleexpeadd">Editar:</h5>
+                  <h5 class="modal-title" id="modalTitleexpeadd">Agregar:</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -54,14 +54,14 @@
                       
                       <div class="mb-3">
                          <label for="exampleInputPassword1" class="form-label">Función</label>
-                         <input type="text" [(ngModel)]="experiencia.function" class="form-control" name="function">
+                         <input type="text" [(ngModel)]="experiencia.funcion" class="form-control" name="function">
                        </div>
           
                        <div class="mb-3">
                          <label for="exampleInputPassword1" class="form-label">Año Inicio </label>
-                         <input type="text"  [(ngModel)]="experiencia.start" class="form-control" name="start">
+                         <input type="text"  [(ngModel)]="experiencia.inicio" class="form-control" name="start">
                          <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
-                         <input type="text" [(ngModel)]="experiencia.end" class="form-control" name="end">
+                         <input type="text" [(ngModel)]="experiencia.fin" class="form-control" name="end">
                        </div>
                        <button type="submit" class="btn btn-primary" >Agregar</button>
                     </form>
@@ -95,14 +95,14 @@
               
               <div class="mb-3">
                  <label for="exampleInputPassword1" class="form-label">Función</label>
-                 <input type="text" [(ngModel)]="experiencia.function" class="form-control" name="function">
+                 <input type="text" [(ngModel)]="experiencia.funcion" class="form-control" name="function">
                </div>
   
                <div class="mb-3">
                  <label for="exampleInputPassword1" class="form-label">Año Inicio </label>
-                 <input type="text" [(ngModel)]="experiencia.start" class="form-control" name="start">
+                 <input type="text" [(ngModel)]="experiencia.inicio" class="form-control" name="start">
                  <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
-                 <input type="text" [(ngModel)]="experiencia.end" class="form-control" name="end">
+                 <input type="text" [(ngModel)]="experiencia.fin" class="form-control" name="end">
                </div>
                <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
             </form>

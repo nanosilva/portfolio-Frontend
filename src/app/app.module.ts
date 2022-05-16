@@ -14,7 +14,9 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from '@angular/forms'
 import { NgCircleProgressModule,  } from 'ng-circle-progress';
-
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgCircleProgressModule,  } from 'ng-circle-progress';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { NgCircleProgressModule,  } from 'ng-circle-progress';
     ReactiveFormsModule,
     FormsModule,
     NgCircleProgressModule.forRoot(),
+    AppRoutingModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [PortfolioService],

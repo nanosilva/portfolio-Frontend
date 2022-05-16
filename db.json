@@ -4,22 +4,22 @@
       "id": 1,
       "position": "Asistente Técnico Area de Planificación y Monitoreo",
       "company": "Programa Sumar - Ministerio de Salud Pcia. Bs As",
-      "function": "Diseñar, mantener y actualizar las bases de datos de Estadísticas Sanitarias, Económicas y Financieras del Proyecto y analizar su cumplimiento.",
+      "funcion": "Diseñar, mantener y actualizar las bases de datos de Estadísticas Sanitarias, Económicas y Financieras del Proyecto y analizar su cumplimiento.",
       "img": "../../../assets/imagenes/logo_bs_as.jpg",
       "mode": "",
-      "start": "2014",
-      "end": "actualidad",
+      "inicio": "2014",
+      "fin": "actualidad",
       "timeElapsed": "8 años"
     },
     {
       "id": 2,
       "position": "Consultor",
       "company": "Incluir Salud",
-      "function": "Asistir técnicamente",
+      "funcion": "Asistir técnicamente",
       "img": "",
       "mode": "",
-      "start": "2007",
-      "end": "2014",
+      "inicio": "2007",
+      "fin": "2014",
       "timeElapsed": ""
     }
   ],
@@ -30,8 +30,8 @@
       "title": "Licenciado en Economía",
       "img": "./../../assets/imagenes/logo_fce.jpg",
       "career": "Facultad Ciencias Económicas",
-      "start": "1999",
-      "end": "incompleto"
+      "inicio": "1999",
+      "fin": "incompleto"
     },
     {
       "id": 2,
@@ -39,23 +39,23 @@
       "title": "Técnico Electromecánico",
       "img": "./../../assets/imagenes/Logo_UNLP.jpg",
       "career": "Colegio Industrial",
-      "start": "1992",
-      "end": "1997"
+      "inicio": "1992",
+      "fin": "1997"
     },
     {
       "id": 3,
       "school": "Escuela 236",
       "title": "Primario",
       "career": "Primaria",
-      "start": "1991",
+      "inicio": "1991",
       "img": "",
-      "end": ""
+      "fin": ""
     }
   ],
   "skills": [
     {
       "id": 1,
-      "nombre": "STATA2",
+      "nombre": "STATA",
       "detalle": "Stata es un paquete de software estadístico creado en 1985 por StataCorp. Es utilizado principalmente por instituciones académicas y empresariales dedicadas a la investigación, especialmente en economía, sociología, ciencias políticas, biomedicina, geoquímica y epidemiología, etc\"",
       "imagen": "./../../assets/imagenes/stata.png"
     },

@@ -16,18 +16,18 @@ export interface Educacion{
     title: string;
     img: string;
     career: string;
-    start: string;
-    end: string;
+    inicio: string;
+    fin: string;
 } 
 export interface Experiencia{
     id:number
     position: string;
     company: string;
-    function: string;
+    funcion: string;
     img: string;
     mode: string;
-    start:string;
-    end: string;
+    inicio:string;
+    fin: string;
     timeElapsed:string;
   }
   export interface Skills{
