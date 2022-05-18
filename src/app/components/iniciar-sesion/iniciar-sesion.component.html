@@ -1,14 +1,17 @@
 <div class="container">
 <h1 class="m-5">Iniciar Sesión</h1>
-<form [formGroup]="form" class="m-5">
+<form (ngSubmit)="login()" id="login">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email </label>
-      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" [(ngModel)]="usuario.email"   class="form-control"  required name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese email">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" [(ngModel)]="usuario.password"  class="form-control" required name="password" id="exampleInputPassword1" placeholder="Ingrese contraseña">
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
+  <div class="row"  *ngIf="errorInicio">
+    <label class="float-right" style="color:red;" >Usuario o password incorrectos.</label>
+  </div>  
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+import { AuthenticationService } from 'src/app/servicios/authentication.service';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -7,27 +9,39 @@ import { Form, FormBuilder,FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
+  errorInicio: boolean=false;
+  loading: boolean = false;
+  usuario: any={
+    email: "",
+    password:"",
+  };
 
-  form:FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-    this.form=this.formBuilder.group({
-      email:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required, Validators.minLength(8)]]
-    }
-
-    )
-
-  }
+    constructor(private router: Router,
+              private loginservice: AuthenticationService){
+                
+              }
 
   ngOnInit(): void {
   }
+  
+  login(){
+    let formulario: any=document.getElementById("login");
+    let formularioValido: boolean = formulario.reportValidity();
+    if(formularioValido){
+      this.loginservice.authenticateUser(this.usuario).subscribe(data=>
+        this.iniciarSesion(data));
+        console.log(this.usuario);
+    }
+   
+    }
 
-  get Email(){
-    return this.form.get('email');
-  }
-  get Password(){
-    return this.form.get('password');
-  }
-
+    iniciarSesion(resultado: any){
+      if(resultado){
+        sessionStorage.setItem("usuario",JSON.stringify(resultado));
+       this.router.navigate(["/portfolio"]) ;
+       }
+      else{
+        this.errorInicio=true
+      }
+    }
 }
