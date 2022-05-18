@@ -44,4 +44,7 @@ export class IniciarSesionComponent implements OnInit {
         this.errorInicio=true
       }
     }
+    cerrarSesion(){
+      sessionStorage.removeItem("usuario")
+    }
 }

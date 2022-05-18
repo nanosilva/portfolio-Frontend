@@ -37,11 +37,13 @@ export class ExperienciaComponent implements OnInit {
   
 
   deleteExpe(experiencia: Experiencia ){
+      alert("Está seguro de eliminar?")
       this.datosPortfolio.deleteExperiencia(experiencia)
       .subscribe(
        ()=>[
        this.experienciaList=this.experienciaList.filter( (item) => {
         console.log("experiencia deleted!"); 
+       
         return item.id !== experiencia.id
         
        })

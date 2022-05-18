@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵCurrencyIndex } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Skills } from '../interfaces/portfolio.interface';
 
@@ -34,6 +34,7 @@ export class SkillsComponent implements OnInit {
 
 
   delete(skill:Skills): void{
+       alert("Está seguro de eliminar?")
       this.datosPortfolio.deleteSkill(skill)
       .subscribe(
        ()=>[
@@ -50,8 +51,10 @@ editarSk(skill: Skills){
          
        } ;
 
-openforEdit(skill: Skills){
-    this.skill= skill;
+openforEdit( ){
+
+  let formulario: any=document.getElementById("editar");
+  this.skill
   }
 
 }

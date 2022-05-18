@@ -39,6 +39,7 @@ export class EducacionComponent implements OnInit {
     };
     
   delete(educacion:Educacion){
+    alert("Está seguro de eliminar?")
     this.datosPortfolio.deleteDatos(educacion)
     .subscribe(
      ()=>[

@@ -15,7 +15,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     
+    
     }
-   
+   cerrarSesion(){
+    this.loginService.logOut();
+    console.log("click logout")
+   }
 
+    
 }

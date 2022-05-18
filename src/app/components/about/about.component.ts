@@ -52,6 +52,7 @@ agregarPers(){
 };
 
 deletePers(persona:Persona){
+  alert("Está seguro de eliminar?")
   this.datosPortfolio.deletePersona(persona)
   .subscribe(
    ()=>[
