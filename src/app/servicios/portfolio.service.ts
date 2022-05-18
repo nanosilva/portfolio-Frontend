@@ -39,15 +39,15 @@ export class PortfolioService {
               }
       
  agregarEducacion(educacion: Educacion ): Observable <any>{
-      return this.http.post(`${this.apiUrl}/educacion`, educacion, httpOptions); 
+      return this.http.post(`${this.apiUrl}/educacion/new`, educacion, httpOptions); 
   }
 
  deleteDatos(educacion:Educacion): Observable <Educacion>{
-    const url = `${this.apiUrl}/educacion/${educacion.id}`;
+    const url = `${this.apiUrl}/educacion/delete/${educacion.id}`;
       return this.http.delete<Educacion>(url, httpOptions)
   };
  editarEducacion(educacion: Educacion):Observable<any>{
-      return this.http.put(`${this.apiUrl}/educacion/${educacion.id}`, educacion, httpOptions)
+      return this.http.post<Educacion>(`${this.apiUrl}/educacion/edit/${educacion.id}`, educacion, httpOptions)
   };
  
 agregarSkill(skill: Skills ): Observable <Skills>{
@@ -89,4 +89,16 @@ editarExperiencia(experiencia: Experiencia): Observable <Experiencia>{
   return this.http.post<Experiencia>(`${this.apiUrl}/experiencia/edit/${experiencia.id}`, experiencia, httpOptions)
 };
 
+agregarProyecto(proyecto: Proyecto ): Observable <any>{
+  return this.http.post<Proyecto>(`${this.apiUrl}/proyectos/new`, proyecto, httpOptions); 
+};
+
+deleteProyecto(proyecto:Proyecto): Observable <Proyecto>{
+  const url = `${this.apiUrl}/proyectos/delete/${proyecto.id}`;
+    return this.http.delete<Proyecto>(url, httpOptions)
+};
+
+editarProyecto(proyecto: Proyecto): Observable <Proyecto>{
+  return this.http.post<Proyecto>(`${this.apiUrl}/proyectos/edit/${proyecto.id}`, proyecto, httpOptions)
+};
 }

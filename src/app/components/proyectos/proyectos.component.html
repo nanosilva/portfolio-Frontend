@@ -1,6 +1,6 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
   <div class="container">
-      <h2>Proyectos <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModalexpeadd" data-toggle="tooltip" data-placement="top" title="Agregar">
+      <h2>Proyectos <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModaladdproyecto" data-toggle="tooltip" data-placement="top" title="Agregar">
           <i  i-bs name="plus-circle-fill" style="color:black"></i>
             </a>
        </h2>
@@ -16,11 +16,11 @@
                 <img [src]="proyecto.imagen" class="rounded-circle" width="120" height="120" alt="" >
                 </div>
              <div class="col-10" > 
-                <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModalexpeedit" data-toggle="tooltip" data-placement="top" title="Editar">
-                   <i  i-bs name="pencil-fill" style="color:black" ></i></a>
+                <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModaleditproyecto" data-toggle="tooltip" data-placement="top" title="Editar">
+                   <i (click)="openforEdit(proyecto)" i-bs name="pencil-fill" style="color:black" ></i></a>
                    
-                   <a  href="" > 
-                   <i  i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
+                   <a > 
+                   <i (click)="deleteProyec(proyecto)" i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
                  </div>
            
               <h4>{{proyecto.nombre}}</h4>
@@ -38,24 +38,89 @@
 <!-- Button trigger modal -->
 
   
-  <!-- Modal -->
-  <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <!-- Modal agregar -->
+  <div class="modal fade" id="miModaladdproyecto" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle">Modal title</h5>
+          <h5 class="modal-title" id="modalTitleaddproyecto">Agregar Proyecto</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+         <form (ngSubmit)="agregarProyec(proyecto)">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="text" [(ngModel)]="proyecto.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Detalle</label>
+              <input type="text" [(ngModel)]="proyecto.detalle" class="form-control" name="detalle">
+            </div>
+            
+            <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Imagen</label>
+               <input type="text" [(ngModel)]="proyecto.imagen" class="form-control" name="imagen">
+             </div>
+
+             <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Fecha </label>
+               <input type="text" [(ngModel)]="proyecto.fecha" class="form-control" name="fecha">
+               <label for="exampleInputPassword1" class="form-label">Link </label>
+               <input type="text" [(ngModel)]="proyecto.link" class="form-control" name="link">
+             </div>
+             <button type="submit" class="btn btn-primary" >Agregar</button>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          
         </div>
       </div>
     </div>
   </div>
+<!--modal edit-->
+  <div class="modal fade" id="miModaleditproyecto" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleeditproyecto">Editar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <form (ngSubmit)="editarProyec(proyecto)">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="text" [(ngModel)]="proyecto.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Detalle</label>
+              <input type="text" [(ngModel)]="proyecto.detalle" class="form-control" name="detalle">
+            </div>
+            
+            <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Imagen</label>
+               <input type="text" [(ngModel)]="proyecto.imagen" class="form-control" name="imagen">
+             </div>
+
+             <div class="mb-3">
+               <label for="exampleInputPassword1" class="form-label">Fecha </label>
+               <input type="text" [(ngModel)]="proyecto.fecha" class="form-control" name="fecha">
+               <label for="exampleInputPassword1" class="form-label">Link </label>
+               <input type="text" [(ngModel)]="proyecto.link" class="form-control" name="link">
+             </div>
+             <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <h1>Idiomas</h1>
   </div>

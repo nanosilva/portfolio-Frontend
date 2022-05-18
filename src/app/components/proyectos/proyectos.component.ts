@@ -28,5 +28,30 @@ proyecto: Proyecto = {
     
   })};
 
+  agregarProyec(proyecto: Proyecto){
+    this.datosPortfolio.agregarProyecto(proyecto).subscribe()
   
+};
+deleteProyec(proyecto: Proyecto ){
+  alert("Está seguro de eliminar?")
+  this.datosPortfolio.deleteProyecto(proyecto)
+  .subscribe(
+   ()=>[
+   this.proyectoList=this.proyectoList.filter( (item) => {
+    console.log("proyect deleted!"); 
+   
+    return item.id !== proyecto.id
+    
+   })
+  ]
+  )};
+
+  editarProyec(proyecto: Proyecto){
+    this.datosPortfolio.editarProyecto(proyecto).subscribe()
+     
+};
+
+openforEdit(proyecto: Proyecto){
+this.proyecto= proyecto;
+}
 }
