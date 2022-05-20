@@ -1,19 +1,19 @@
 <!-- //navbar -->
   <div class="fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand ms-4" href="#" >
+    <a class="navbar-brand ms-4" routerLink="/portfolio" >
     <img src="../../../assets/imagenes/APLogo-20-20.png" width="90" height="80" class="d-inline block h3 "  alt="" class="">#Yo Programo</a>
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-        <a class="nav-link " href="#">
+        <a class="nav-link " href="www.twitter.com" target="_blank" >
           <i i-bs name="twitter" style="color:white"></i> Twitter <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="www.facebook.com">
           <i i-bs name= "facebook" style="color:white"></i> Facebook</a>
         </li>
         <li class="nav-item">
@@ -23,7 +23,11 @@
        <button  class="btn btn-primary me-2" *ngIf="!loginService" routerLink="/iniciar-sesion">
          <i i-bs name="box-arrow-in-right" style="color:white"></i> Login</button>
        
-    <li><a *ngIf="loginService" (click)="cerrarSesion()" routerLink="/iniciar-sesion" class="btn btn-primary me-2">Log-Out</a></li>
+        <li><a *ngIf="loginService" (click)="cerrarSesion()" 
+          routerLink="/iniciar-sesion" class="btn btn-primary me-2" >
+          <i i-bs name="box-arrow-in-left" style="color:white"  width="25"
+          height="25"  ></i>logout</a>  
+        </li>
       </ul>
     </div>
  </nav>

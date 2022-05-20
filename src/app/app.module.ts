@@ -18,6 +18,8 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app.routes';
 import { LogoutComponent } from './components/logout/logout.component';
+import { IdiomasComponent } from './components/idiomas/idiomas.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LogoutComponent } from './components/logout/logout.component';
     ProyectosComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    LogoutComponent
+    LogoutComponent,
+    IdiomasComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

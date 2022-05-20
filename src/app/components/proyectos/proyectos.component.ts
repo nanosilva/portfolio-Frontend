@@ -33,7 +33,7 @@ proyecto: Proyecto = {
   
 };
 deleteProyec(proyecto: Proyecto ){
-  alert("Está seguro de eliminar?")
+  alert("Se eliminará proyecto")
   this.datosPortfolio.deleteProyecto(proyecto)
   .subscribe(
    ()=>[
@@ -48,7 +48,9 @@ deleteProyec(proyecto: Proyecto ){
 
   editarProyec(proyecto: Proyecto){
     this.datosPortfolio.editarProyecto(proyecto).subscribe()
-     
+    alert("se guardaron cambios");
+    
+
 };
 
 openforEdit(proyecto: Proyecto){

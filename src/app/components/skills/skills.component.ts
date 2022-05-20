@@ -1,4 +1,5 @@
 import { Component, OnInit, ɵCurrencyIndex } from '@angular/core';
+import { Router } from '@angular/router';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Skills } from '../interfaces/portfolio.interface';
 
@@ -18,7 +19,8 @@ export class SkillsComponent implements OnInit {
     imagen:"",
    
   }
-  constructor(private datosPortfolio: PortfolioService) { }
+  constructor(private datosPortfolio: PortfolioService,
+              private route: Router) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerSkills().subscribe(data=>{
@@ -34,7 +36,7 @@ export class SkillsComponent implements OnInit {
 
 
   delete(skill:Skills): void{
-       alert("Está seguro de eliminar?")
+       alert("Se eliminará skill!")
       this.datosPortfolio.deleteSkill(skill)
       .subscribe(
        ()=>[
@@ -48,14 +50,14 @@ export class SkillsComponent implements OnInit {
 
 editarSk(skill: Skills){
         this.datosPortfolio.editarSkill(skill).subscribe()
-         
-       } ;
+        alert("se guardaron cambios");
+        } ;
 
-openforEdit( ){
+openforEdit(skill: Skills){
+   this.skill= skill;
+  };
 
-  let formulario: any=document.getElementById("editar");
-  this.skill
-  }
+  
 
 }
 

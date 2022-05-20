@@ -9,7 +9,7 @@
          <li *ngFor="let persona of personaList" class="list group-item list-group-item-action">
              <div class="row">
                 <div class="col-2" >
-                        <img [src]="persona.image" class="rounded-circle" width="140" height="140" alt="" >
+                        <img [src]="persona.image" class="rounded-circle" width="140" height="140" alt="" style="border: 3px solid; color: black;" >
                         <div><i class="float-end" i-bs name="pencil-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Editar foto"></i></div>
                         <h4 class="mt-3">{{persona.ocupacion}}</h4>
                         <p>{{persona.ubicacion}}</p>    
@@ -23,7 +23,7 @@
                         </div>
            
                         <h4>{{persona.nombre}}</h4>
-                        <h5 class="container mt-4">{{persona.about}}</h5>
+                        <h6 class="container mt-4">{{persona.about}}</h6>
                  
                         
                      </div>

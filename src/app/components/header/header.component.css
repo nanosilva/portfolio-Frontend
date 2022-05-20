@@ -10,7 +10,8 @@
 	box-sizing: border-box;
 	transition: 0.4s;
 }
-.banner-1:hover{
+
+/*  .banner-1:hover{
 	background: #444;
 	transition: .4s;
 }
@@ -24,4 +25,4 @@
 	font-weight: bold;
 	color: #fff;
 	border-bottom: 2px solid #fff;
-}
+}*/

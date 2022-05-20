@@ -39,8 +39,8 @@ openforEdit(persona: Persona){
 }
 
 editar(persona : Persona){
-    this.datosPortfolio.editarPersona(persona).subscribe()
-  
+    this.datosPortfolio.editarPersona(persona).subscribe();
+    alert("se guardaron cambios")
    } ;
 onSubmit(){
   this.editar;
@@ -52,7 +52,7 @@ agregarPers(){
 };
 
 deletePers(persona:Persona){
-  alert("Está seguro de eliminar?")
+  alert("Se elimará perfil")
   this.datosPortfolio.deletePersona(persona)
   .subscribe(
    ()=>[

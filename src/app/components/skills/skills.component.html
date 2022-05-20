@@ -6,12 +6,12 @@
     
             </div>  
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col" *ngFor="let skill of skillList; let i= index;">
+        <div class="col" *ngFor="let skill of skillList; let i= index;" >
           
           <div class="card h-100">
             <div class="container mt-3">
-              <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModal3" data-toggle="tooltip" data-placement="top" title="Editar">
-                <i (click)="openforEdit()" i-bs name="pencil-fill" style="color:black" ></i></a>
+              <div class="float-end " ><a class="me-4"  title="Editar" data-bs-toggle="modal" data-bs-target="#miModal3" data-toggle="tooltip" data-placement="top">
+                <i (click)="openforEdit(skill)" i-bs name="pencil-fill" style="color:black" ></i></a>
                 <a >
                 <i (click)="delete(skill)" i-bs name="x-circle-fill" style="color:black" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></a>
                </div>
@@ -21,9 +21,9 @@
             <div class="card-body">
               <h5 class="card-title">{{skill.nombre}}</h5>
               <p class="card-text">{{skill.detalle}}</p>
-            </div>
+              </div>
             <div class="card-footer " >
-             
+              
               <circle-progress
               [percent]="60" [maxPercent]="100" [toFixed]="0" [showTitle]="true" [showUnits]="false"
               [showSubtitle]="true" [showImage]="false" [showBackground]="false" [showInnerStroke]="true"

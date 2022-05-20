@@ -37,7 +37,7 @@ export class ExperienciaComponent implements OnInit {
   
 
   deleteExpe(experiencia: Experiencia ){
-      alert("Está seguro de eliminar?")
+      alert("Este elemento se eliminará")
       this.datosPortfolio.deleteExperiencia(experiencia)
       .subscribe(
        ()=>[
@@ -52,11 +52,16 @@ export class ExperienciaComponent implements OnInit {
       
   editarExpe(experiencia: Experiencia){
         this.datosPortfolio.editarExperiencia(experiencia).subscribe()
+         alert("se guardaron cambios")
          
+        
    };
+   
 
    openforEdit(experiencia: Experiencia){
     this.experiencia= experiencia;
+    
+    
   }
        
 

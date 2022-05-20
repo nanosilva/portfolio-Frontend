@@ -39,7 +39,7 @@ export class EducacionComponent implements OnInit {
     };
     
   delete(educacion:Educacion){
-    alert("Está seguro de eliminar?")
+    alert("Se eliminará educación")
     this.datosPortfolio.deleteDatos(educacion)
     .subscribe(
      ()=>[
@@ -53,7 +53,7 @@ export class EducacionComponent implements OnInit {
 
    editar(educacion: Educacion){
      this.datosPortfolio.editarEducacion(educacion).subscribe()
-      
+     alert("se guardaron cambios")
     } ;
 
   openforEdit(educacion: Educacion){
