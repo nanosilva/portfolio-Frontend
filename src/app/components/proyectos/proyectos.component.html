@@ -4,15 +4,17 @@
           <i  i-bs name="plus-circle-fill" style="color:black"></i>
             </a>
        </h2>
-       <div class="banner-1">
-       <img src="../../../assets/imagenes/proyectos.png"  width="1000" height="400"     > 
-      </div> 
+             
+          <div class="container mb-4">
+            <img src="../../../assets/imagenes/Proyectos-01.png " class="img-fluid" > 
+               </div> 
+           
   </div>
     <ul class="list-unstyled">
             <li *ngFor="let proyecto of proyectoList" class="list group-item list-group-item-action"
                >
              <div class="row">
-                <div class="col-2" >
+                <div class="col-sm" >
                 <img [src]="proyecto.imagen" class="rounded-circle" width="120" height="120" alt="" >
                 </div>
              <div class="col-10" > 
@@ -26,7 +28,11 @@
               <h4>{{proyecto.nombre}}</h4>
                  <h6>{{proyecto.detalle}}</h6>
                  <h6>{{proyecto.fecha}}</h6>
-                <p>{{proyecto.link}}</p>
+                 <ng-container >
+                  <a style="color:black" *ngIf="!!proyecto.link" [href]="proyecto.link" target="_blank">Ver 
+                    
+                  </a>
+            </ng-container>
                
              </div>
                </div>
