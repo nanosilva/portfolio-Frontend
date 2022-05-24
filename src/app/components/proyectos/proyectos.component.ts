@@ -30,6 +30,7 @@ proyecto: Proyecto = {
 
   agregarProyec(proyecto: Proyecto){
     this.datosPortfolio.agregarProyecto(proyecto).subscribe()
+    alert("se agregó proyecto")
   
 };
 deleteProyec(proyecto: Proyecto ){

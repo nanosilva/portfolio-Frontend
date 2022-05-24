@@ -33,6 +33,7 @@ export class ExperienciaComponent implements OnInit {
   agregarExpe(){
     this.datosPortfolio.agregarExperiencia(this.experiencia).subscribe(data=>
     this.experienciaList.push(data))
+    alert("se agregó experiencia")
     };
   
 

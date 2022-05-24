@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
     nombre:"",
     detalle:"",
     imagen:"",
-   
+    
   }
   constructor(private datosPortfolio: PortfolioService,
               private route: Router) { }

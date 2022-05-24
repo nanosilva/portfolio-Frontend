@@ -22,7 +22,7 @@
              
                 <h4>{{experiencia.company}}</h4>
                    <h5>{{experiencia.position}}</h5>
-                   <h6>{{experiencia.funcion}}</h6>
+                   <p>{{experiencia.funcion}}</p>
                   <p><time>{{experiencia.inicio}}</time> - <time>{{experiencia.fin}}</time></p>
                  
                </div>
@@ -62,6 +62,8 @@
                          <input type="text"  [(ngModel)]="experiencia.inicio" class="form-control" name="start">
                          <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
                          <input type="text" [(ngModel)]="experiencia.fin" class="form-control" name="end">
+                         <label for="exampleInputPassword1" class="form-label">Logo </label>
+                         <input type="text" [(ngModel)]="experiencia.img" class="form-control" name="img">
                        </div>
                        <button type="submit" class="btn btn-primary" >Agregar</button>
                     </form>
@@ -103,6 +105,8 @@
                  <input type="text" [(ngModel)]="experiencia.inicio" class="form-control" name="start">
                  <label for="exampleInputPassword1" class="form-label">Año Finalización </label>
                  <input type="text" [(ngModel)]="experiencia.fin" class="form-control" name="end">
+                 <label for="exampleInputPassword1" class="form-label">Logo </label>
+                 <input type="text" [(ngModel)]="experiencia.img" class="form-control" name="img">
                </div>
                <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
             </form>

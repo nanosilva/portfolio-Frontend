@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl= 'http://localhost:8080';
+  private apiUrl= 'https://miportfolio-api.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 

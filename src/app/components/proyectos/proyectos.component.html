@@ -1,7 +1,7 @@
 <div class="container mt-4 shadow p-4 mb-4 bg-white rounded-1">
   <div class="container">
       <h2>Proyectos <a class="ms-3" data-bs-toggle="modal" data-bs-target="#miModaladdproyecto" data-toggle="tooltip" data-placement="top" title="Agregar">
-          <i  i-bs name="plus-circle-fill" style="color:black"></i>
+          <i i-bs name="plus-circle-fill" style="color:black"></i>
             </a>
        </h2>
              
@@ -14,8 +14,11 @@
             <li *ngFor="let proyecto of proyectoList" class="list group-item list-group-item-action"
                >
              <div class="row">
-                <div class="col-sm" >
-                <img [src]="proyecto.imagen" class="rounded-circle" width="120" height="120" alt="" >
+                <div class="col-sm mb-4" >
+                  <ng-container >
+                    <img *ngIf="!!proyecto.imagen" [src]="proyecto.imagen" class="rounded-circle" width="120" height="120" alt="" > 
+              </ng-container>
+  
                 </div>
              <div class="col-10" > 
                 <div class="float-end " ><a class="me-4" data-bs-toggle="modal" data-bs-target="#miModaleditproyecto" data-toggle="tooltip" data-placement="top" title="Editar">
